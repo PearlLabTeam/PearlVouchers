@@ -1,0 +1,4 @@
+name: PearlVouchers
+version: '${project.version}'
+main: team.pearllab.pearlvouchers.PearlVouchers
+api-version: 1.16
