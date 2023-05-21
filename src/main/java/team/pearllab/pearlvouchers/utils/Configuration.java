@@ -34,7 +34,7 @@ public class Configuration {
             e.printStackTrace();
         }
 
-        language = Language.withValue(configFile.getString("language"));
+        this.language = Language.withValue(configFile.getString("language"));
     }
 
 }
