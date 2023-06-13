@@ -72,6 +72,12 @@
 
     <dependencies>
         <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>24.0.1</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
             <groupId>me.java4life</groupId>
             <artifactId>BaseLib</artifactId>
             <version>1.1</version>

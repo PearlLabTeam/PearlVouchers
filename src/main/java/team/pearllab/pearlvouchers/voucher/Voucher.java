@@ -6,7 +6,6 @@ import com.eclipsesource.json.JsonValue;
 import me.java4life.storage.Holdable;
 import me.java4life.storage.SerializeType;
 import me.java4life.tools.CustomFile;
-import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.bukkit.Material;
 import org.bukkit.Sound;
 import team.pearllab.pearlvouchers.PearlVouchers;
@@ -24,6 +23,9 @@ public class Voucher extends Holdable {
 
     // The voucher's ID. This is the unique identifier for the voucher.
     private final String voucherId;
+
+    // The voucher's name. This is the name that will be displayed to the player when they use the voucher.
+    private String voucherName;
 
     // The UUID of the player who created the voucher.
     private final UUID voucherCreator;
@@ -54,6 +56,9 @@ public class Voucher extends Holdable {
         this.voucherId = voucherId;
         this.voucherCreator = voucherCreator;
 
+        // Assign the holdable's UUID to the voucher's ID.
+        setUniqueID(voucherId);
+
         // Try to load the voucher file. If something goes wrong, print the stack trace and return.
         if (!loadVoucherFile(newVoucher)) {
             return;
@@ -81,6 +86,9 @@ public class Voucher extends Holdable {
         }
 
         JsonObject voucherJson = Json.parse(data).asObject();
+
+        // Get the name of the voucher
+        this.voucherName = voucherJson.getString("name", "");
 
         // Get the material of the voucher
         this.voucherMaterial = Materials.getMaterial(voucherJson.getString("material", ""));
@@ -125,6 +133,8 @@ public class Voucher extends Holdable {
             } else {
                 Console.sendMessage(LogType.ERROR, "Failed to load voucher file for voucher " + this.voucherId + "!");
             }
+
+            return false;
         }
 
         return true;
@@ -134,6 +144,7 @@ public class Voucher extends Holdable {
     public Object serialize(SerializeType type) {
         JsonObject serializedVoucher = new JsonObject();
 
+        serializedVoucher.add("name", this.voucherName);
         serializedVoucher.add("material", this.voucherMaterial.toString());
         serializedVoucher.add("glowing", this.voucherGlowing);
         serializedVoucher.add("messages", this.voucherMessages.toString());
@@ -153,6 +164,10 @@ public class Voucher extends Holdable {
 
     public String getVoucherId() {
         return voucherId;
+    }
+
+    public String getVoucherName() {
+        return voucherName;
     }
 
     public UUID getVoucherCreator() {
@@ -197,6 +212,9 @@ public class Voucher extends Holdable {
 
     // SETTERS
 
+    public void setVoucherName(String voucherName) {
+        this.voucherName = voucherName;
+    }
     public void setVoucherMaterial(Material voucherMaterial) {
         this.voucherMaterial = voucherMaterial;
     }

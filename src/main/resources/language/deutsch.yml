@@ -1,0 +1,14 @@
+# Leer lassen als "", um zu deaktivieren
+#
+# Unterstützt Hex-Farbcodes und Formate
+#
+# Hex-Farbe | Format: <#hexFarbe>Nachricht | Beispiel: <#f067cb>Dies ist eine Nachricht.
+# Verlauf-Format | Format: {#startFarbe>}Nachricht{#endFarbe<} | {#f067cb>}<fett><unterstrichen>Dies ist ein weiteres Beispiel für eine Nachricht!{#21cbff<}
+# Schau dir {link} für eine Liste der Platzhalter an.
+#
+prefix: "&8[&bPearl&dVouchersn&8] &7"
+true: "&awahr"
+false: "&cfalsch"
+rename-voucher: "&eBitte gib den neuen Namen des Gutscheins im Chat ein. Gib &ccancel &zein, um abzubrechen."
+rename-voucher-cancel: "&eDie Umbenennung des Gutscheins wurde abgebrochen."
+rename-voucher-success: "&eDer Gutschein wurde erfolgreich in &d%new_name%&e umbenannt."

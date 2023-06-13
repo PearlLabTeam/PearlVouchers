@@ -5,9 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd3714ed-a50e-4169-96ce-3c2fe2858e08" name="Changes" comment="- Added the configuration.yml, english.yml, spanish.yml, and deutsch.yml&#10;- Added a serialize method and save method to the Voucher.java class&#10;- Created the VoucherHolder.java which takes care of creating, loading, and saving vouchers.&#10;- Added the VoucherInventory.java which just holds the contents that the voucher creator adds to the voucher.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/team/pearllab/pearlvouchers/commands/VoucherCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/team/pearllab/pearlvouchers/guis/VoucherEditor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/team/pearllab/pearlvouchers/utils/Files.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/guis/voucherEditor.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_eclipsesource_minimal_json_minimal_json_0_9_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_21_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__me_java4life_BaseLib_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_md_5_bungeecord_chat_1_16_R0_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_spigotmc_spigot_api_1_16_5_R0_1_SNAPSHOT.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_27.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/team/pearllab/pearlvouchers/Testing.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/team/pearllab/pearlvouchers/utils/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team/pearllab/pearlvouchers/utils/Configuration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PearlVouchers.iml" beforeDir="false" afterPath="$PROJECT_DIR$/PearlVouchers.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/team/pearllab/pearlvouchers/PearlVouchers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team/pearllab/pearlvouchers/PearlVouchers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/team/pearllab/pearlvouchers/lang/LangManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team/pearllab/pearlvouchers/lang/LangManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/team/pearllab/pearlvouchers/lang/Phrase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team/pearllab/pearlvouchers/lang/Phrase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/team/pearllab/pearlvouchers/voucher/Voucher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team/pearllab/pearlvouchers/voucher/Voucher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/team/pearllab/pearlvouchers/voucher/VoucherHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team/pearllab/pearlvouchers/voucher/VoucherHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/configuration.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/configuration.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/language/deutsch.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/language/deutsch.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/language/english.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/language/english.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/language/spanish.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/language/spanish.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +47,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$MAVEN_REPOSITORY$/me/java4life/BaseLib/1.1/BaseLib-1.1.jar!/me/java4life/dialog/UserInput.class" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -44,10 +71,12 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/juand/IdeaProjects/PearlVouchers/src/main/java/team/pearllab/pearlvouchers&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -140,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684209432752</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="- Added the configuration.yml, english.yml, spanish.yml, and deutsch.yml&#10;- Added a serialize method and save method to the Voucher.java class&#10;- Created the VoucherHolder.java which takes care of creating, loading, and saving vouchers.&#10;- Added the VoucherInventory.java which just holds the contents that the voucher creator adds to the voucher.">
+      <created>1684705810743</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1684705810743</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

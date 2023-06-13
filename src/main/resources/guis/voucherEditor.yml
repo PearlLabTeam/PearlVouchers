@@ -1,0 +1,164 @@
+#| In this file you will be able to create the appearance of the gui that is opened to a player when  |#
+#|                                    they are crafting a voucher                                     |#
+#|                                                                                                    |#
+#|____________________________________________________________________________________________________|#
+gui-title: "&d&lVoucher Crafter"
+#Local placeholders
+# %voucher_name% - The name of the voucher
+# %voucher_id% - The id of the voucher
+# %voucher_material% - The material of the voucher
+# %voucher_glowing% - The glowing status of the voucher
+# %voucher_messages% - The messages of the voucher
+#
+# The size of the gui. (in digits of 9 [9,18,27,36,45,54])
+gui-size: 54
+# Create your items here. You can create as many as you want with
+# different names, but be sure to keep the default ones for full
+# functionality.
+content:
+  name:
+    type: rename
+    # The material the item will be made of. You can find this by
+    # pressing down 'F3' and 'H' at the same time in the game
+    # under all the items name and data without the 'minecraft:'
+    # example (material: DIAMOND_BLOCK)
+    material: NAME_TAG
+    name: "&4Voucher Name"
+    # The lines under the item's name
+    lore:
+      - "&7The name of the voucher. This name will display"
+      - "&7in the voucher when created."
+      - " "
+      - "&7Current Name&8: &7%voucher_name%"
+      - "&7Current ID&8: &7%voucher_id%"
+      - " "
+      - "&7Click to change the name of the voucher."
+    # Can be in more than one slot but separate with a - (ex: 1-2-3-4-5)
+    # TIP: The first slot starts at 0 and not 1.
+    # set to 888 to not include it
+    slot: 11
+  material:
+    type: material-selector
+    material: GRASS_BLOCK
+    name: "&4Material Selector"
+    lore:
+      - "&7The material of the voucher. This material will display"
+      - "&7as the icon of the voucher when created."
+      - " "
+      - "&7Current Material&8: &7%voucher_material%"
+      - " "
+      - "&7Click to change the material of the voucher."
+    slot: 13
+  glowing:
+    type: toggle-glowing
+    material: GLOWSTONE_DUST
+    name: "&4Glowing"
+    lore:
+      - "&7Should the voucher item glow when created?"
+      - " "
+      - "&7Current Status&8: &7%voucher_glowing%"
+      - " "
+      - "&7Click to change the glowing status of the voucher."
+    slot: 15
+  messages:
+    type: edit-messages
+    material: PAPER
+    name: "&4Messages"
+    lore:
+      - "&7The messages that will be displayed when the voucher"
+      - "&7is used."
+      - " "
+      - "&7Click to change the messages of the voucher."
+      - " "
+      - "&7Current Messages&8:"
+      - "%voucher_messages%"
+    slot: 21
+  sounds:
+    type: edit-sounds
+    material: MUSIC_DISC_11
+    name: "&4Sounds"
+    lore:
+      - "&7The sounds that will be played when the voucher"
+      - "&7is used."
+      - " "
+      - "&7Click to change the sounds of the voucher."
+      - " "
+      - "&7Current Sounds&8:"
+      - "%voucher_sounds%"
+    slot: 23
+  title:
+    type: edit-title
+    material: BOOK
+    name: "&4Title"
+    lore:
+      - "&7The title that will be displayed when the voucher"
+      - "&7is used."
+      - " "
+      - "&7Click to change the title of the voucher."
+      - " "
+      - "&7Current Title&8:"
+      - "%voucher_title%"
+    slot: 31
+  subtitle:
+    type: edit-subtitle
+    material: BOOK
+    name: "&4Subtitle"
+    lore:
+      - "&7The subtitle that will be displayed when the voucher"
+      - "&7is used."
+      - " "
+      - "&7Click to change the subtitle of the voucher."
+      - " "
+      - "&7Current Subtitle&8:"
+      - "%voucher_subtitle%"
+    slot: 39
+  inventory:
+    type: edit-inventory
+    material: BARREL
+    name: "&4Inventory"
+    lore:
+      - "&7The inventory that will be displayed when the voucher"
+      - "&7is used."
+      - " "
+      - "&7Click to change the inventory of the voucher."
+      - " "
+      - "&7Current Inventory&8:"
+      - "%voucher_inventory%"
+      - " "
+    slot: 41
+  back:
+    type: cancel
+    material: BARRIER
+    name: "&4Cancel"
+    lore:
+      - "&7Click to cancel the crafting of the voucher."
+    slot: 49
+    craft:
+      type: craft
+      material: EMERALD
+      name: "&4Craft"
+      lore:
+        - "&7Click to craft the voucher."
+        - " "
+        - "&7Current Cost&8: &7%voucher_cost%"
+        - " "
+        - "&7Click to craft the voucher."
+
+  display-1:
+    type: display
+    material: PURPLE_STAINED_GLASS_PANE
+    name: " "
+    lore: [ ]
+    slot: 0-8-9-17-18-26-27-35-36-37-43-44-45-46-52
+  display-2:
+    type: display
+    material: MAGENTA_STAINED_GLASS_PANE
+    name: " "
+    lore: [ ]
+    slot: 12-14-28-30-32-34-40
+  display-3:
+    type: display
+    material: BLACK_STAINED_GLASS_PANE
+    name: " "
+    lore: [ ]
+    slot: 1-2-3-4-5-6-7-10-16-19-20-22-24-25-29-33-38-42-47-48-49-50-51

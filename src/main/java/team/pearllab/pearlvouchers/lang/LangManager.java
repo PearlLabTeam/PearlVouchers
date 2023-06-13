@@ -38,9 +38,14 @@ public class LangManager {
             }
         }
 
-        String message = languageFile.getString(phrase.getKey());
+        // If the phrase is true or false, it will return without the prefix
+        // since it is just a placeholder for a boolean value.
+        if(phrase == Phrase.TRUE || phrase == Phrase.FALSE) {
+            return languageFile.getString(phrase.getKey());
+        }
 
-        return message;
+        String prefix = languageFile.getString(Phrase.PREFIX.getKey());
+        return prefix.length() > 0 ? prefix + languageFile.getString(phrase.getKey()) : languageFile.getString(phrase.getKey());
     }
 
     private void loadLanguageFile() {

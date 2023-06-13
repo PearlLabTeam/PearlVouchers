@@ -1,0 +1,14 @@
+#Leave empty as "" to disable
+#
+# supports hex color codes and formats
+#
+# Hex Color | Format: <#hexColor>Message | Example: <#f067cb>This is a message.
+# Gradient Format | Format: {#startColor>}Message{#endColor<} | {#f067cb>}<bold><underline>This is another example message!{#21cbff<}
+# Look at {link} for a list of placeholders.
+#
+prefix: "&8[&bPearl&dVouchers&8] &7"
+true: "&atrue"
+false: "&cfalse"
+rename-voucher: "&ePlease type the new name of the voucher in chat. Type &ccancel &eto cancel."
+rename-voucher-cancel: "&eVoucher renaming has been cancelled."
+rename-voucher-success: "&eThe voucher has been renamed to &d%new_name%&e."

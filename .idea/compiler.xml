@@ -9,8 +9,5 @@
         <module name="PearlVouchers" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="PearlVouchers" target="16" />
-    </bytecodeTargetLevel>
   </component>
 </project>

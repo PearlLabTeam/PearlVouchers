@@ -29,13 +29,16 @@ public class VoucherHolder extends Holder<Voucher> {
      *
      * @param owner Set the owner of the voucher
      * @param items Set the voucher's inventory
+     * @param hold  Whether to hold the voucher or not - This is used when the voucher is being created to edit it later
+     *              but not to use it yet.
      * @return A voucher object
      */
-    public Voucher newVoucher(UUID owner, ItemStack[] items) {
+    public Voucher newVoucher(UUID owner, ItemStack[] items, boolean hold) {
         String voucherID = assertUniqueID();
 
         // Set the data that the voucher needs to store to start working.
         Voucher voucher = new Voucher(this.plugin, voucherID, owner, true);
+        voucher.setVoucherName("Voucher " + voucherID);
         voucher.setVoucherMaterial(Materials.getMaterial("PAPER"));
         voucher.setVoucherGlowing(false);
         voucher.setVoucherMessages(new ArrayList<>());
@@ -50,7 +53,10 @@ public class VoucherHolder extends Holder<Voucher> {
         }
 
         voucher.setHolder(this);
-        hold(voucher, false);
+
+        if (hold) {
+            hold(voucher, false);
+        }
 
         return voucher;
     }
@@ -108,8 +114,8 @@ public class VoucherHolder extends Holder<Voucher> {
      * @param voucherID Find the voucher that is to be saved
      */
     public void saveVoucher(String voucherID) {
-        for(Voucher voucher : getContents()){
-            if(Objects.equals(voucher.getVoucherId(), voucherID)){
+        for (Voucher voucher : getContents()) {
+            if (Objects.equals(voucher.getVoucherId(), voucherID)) {
                 voucher.serialize(SerializeType.VOID);
                 return;
             }
@@ -122,7 +128,7 @@ public class VoucherHolder extends Holder<Voucher> {
      *
      * @param voucher Get the voucherfile from the voucher object
      */
-    public void destroy(Voucher voucher){
+    public void destroy(Voucher voucher) {
         voucher.getVoucherFile().getFile().ifPresent(File::delete);
         release(voucher);
     }
@@ -135,9 +141,9 @@ public class VoucherHolder extends Holder<Voucher> {
      *
      * @param voucherID Find the voucher to be destroyed
      */
-    public void destroy(String voucherID){
-        for(Voucher voucher : getContents()){
-            if(Objects.equals(voucher.getVoucherId(), voucherID)){
+    public void destroy(String voucherID) {
+        for (Voucher voucher : getContents()) {
+            if (Objects.equals(voucher.getVoucherId(), voucherID)) {
                 voucher.getVoucherFile().getFile().ifPresent(File::delete);
                 release(voucher);
                 return;

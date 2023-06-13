@@ -2,3 +2,9 @@ name: PearlVouchers
 version: '${project.version}'
 main: team.pearllab.pearlvouchers.PearlVouchers
 api-version: 1.16
+author: PearlLab Team
+description: PearlVouchers is a plugin that allows you to create vouchers that can be redeemed for items, commands, and more!
+commands:
+  pvoucher:
+    description: The main command for PearlVouchers.
+    aliases: [voucher, pvc]

@@ -1,0 +1,14 @@
+# Deje vacío como "" para deshabilitar
+#
+# Soporta códigos de colores hexadecimales y formatos
+#
+# Hex Color | Formato: <#hexColor>Mensaje | Ejemplo: <#f067cb>Este es un mensaje.
+# Formato de gradiente | Formato: {#startColor>}Mensaje{#endColor<} | {#f067cb>}<bold><underline>¡Este es otro ejemplo de mensaje!{#21cbff<}
+# Mira {link} para ver una lista de placeholders.
+#
+prefix: "&8[&bPearl&dVouchers&8] &7"
+true: "&averdadero"
+false: "&cfalso"
+rename-voucher: "&ePor favor, escriba el nuevo nombre del bono en el chat. Escriba &ccancel &epara cancelar."
+rename-voucher-cancel: "&eLa renombración del bono ha sido cancelada."
+rename-voucher-success: "&eEl bono ha sido renombrado como &d%new_name%&e."
